@@ -21,6 +21,8 @@ then entering the docker run -it ubuntu.  this command checks if there is an ima
 
 hub.docker.com is from where the containers can be pulled 
 
+**Docker containers and images **
+
 docker is basically about images and containers. images lie inside a container and docker conatiner is isolated that means we can download and run anything inside that container it will not affect the outer local machine on which we are running the container.
 
 we can have multiple containers and images behave as the operating systems and containers run them in isolation. containers do not communicate with each other.
@@ -46,6 +48,23 @@ docker pull image_name : is that command to pull some image and not run it autom
 
 important to note is that big firms pose their docker container which consists of different config images to be ran. so the developers do nothing but they pull that images that is posed publicly like docker run calcom where calcom is a big firm that has posed it's docker image publicly for developer to pull
 
+**Port Mapping**
+Container is a server in itself and a server requires a port 
+
+container has a port in it inside and to map that we use command : docker run -it -p 1025:1025 for example for mapping to our local machine (-p here stands for the port mapper)
+
+port that is first is local port and port that is seond is the container port 
+
+docker images -a -q : command gives you the ids of all the images pulled on the system 
+and docker ps -a -q : command gives you the ids of all the containers on the system 
+
+to remove all the conatiner command is docker rm -f $(docker ps -a -q) where rm : means remove -f means force 
+and similarly to remove all the images we need the commnad: docker rmi -f $(docker imgaes -a -q)
+
+timestamp : 38:22 
+
+
+ 
 
 
 
