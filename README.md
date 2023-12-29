@@ -48,20 +48,35 @@ docker pull image_name : is that command to pull some image and not run it autom
 
 important to note is that big firms pose their docker container which consists of different config images to be ran. so the developers do nothing but they pull that images that is posed publicly like docker run calcom where calcom is a big firm that has posed it's docker image publicly for developer to pull
 
-**Port Mapping**
-Container is a server in itself and a server requires a port 
-
-container has a port in it inside and to map that we use command : docker run -it -p 1025:1025 for example for mapping to our local machine (-p here stands for the port mapper)
-
-port that is first is local port and port that is seond is the container port 
-
 docker images -a -q : command gives you the ids of all the images pulled on the system 
 and docker ps -a -q : command gives you the ids of all the containers on the system 
 
 to remove all the conatiner command is docker rm -f $(docker ps -a -q) where rm : means remove -f means force 
 and similarly to remove all the images we need the commnad: docker rmi -f $(docker imgaes -a -q)
 
-timestamp : 38:22 
+**Port Mapping**
+Container is a server in itself and a server requires a port 
+every container will have a port on which is running inside and we need to expose that port in order to run on http endpoints
+like to run django we require a port which exposes the port on which the nginx container is running 
+
+container has a port in it inside and to map that we use command : docker run -it -p 1025:1025 for example for mapping to our local machine (-p here stands for the port mapper)
+port that is first is local port and port that is seond is the docker container port 
+that is : docker run -it -p host_port:container_port image 
+
+note -p is meant for port mapping in docker
+
+** Environmene variable ** 
+Similar to port mapping if we need to map some env variables in the docker container, we can also do that easily 
+we can run the docker command like : 
+docker run -it -p 8000:8000 -e key1==value1 -e key2==value2 image_name 
+note -e here is for passing the env variable into docker container 
+
+
+
+
+
+
+
 
 
  
