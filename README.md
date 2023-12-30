@@ -71,12 +71,22 @@ we can run the docker command like :
 docker run -it -p 8000:8000 -e key1==value1 -e key2==value2 image_name 
 note -e here is for passing the env variable into docker container 
 
-Dockerisation of an application :
+**Dockerisation of an application **:
 Firstly the most important file you need is the : Dockerfile for dockerising an application 
 make that file at the root level i.e where the manage.py in case of a Django project or main.js in case of a node js project 
 
 this file is basically the configuration for which we have to create an image i.e image of your node js project or image file of your django app 
 you need a base image for creating that image 
+
+You need to study a Dockerfile be it django project or any other tech stack. You need to understand the code that makes your project a docker image.
+
+**Docker compose**
+
+when you have to different containers on different ports
+for eg : one container for postgres, one for mongodb, one for redis etc.
+
+Docker compose is used to setup multiple containers, create multiple containers and also destroy them when not needed 
+docker-compose.yml stores the config for those multiple containers 
 
 
 
