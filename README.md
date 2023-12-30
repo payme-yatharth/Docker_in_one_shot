@@ -88,9 +88,8 @@ for eg : one container for postgres, one for mongodb, one for redis etc.
 Docker compose is used to setup multiple containers, create multiple containers and also destroy them when not needed 
 docker-compose.yml stores the config for those multiple containers 
 
-
-
-
+it contains the version of the docker compose
+it contains the services, ports, envs for running the docker compose container 
 
 
 
