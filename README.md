@@ -88,6 +88,11 @@ for eg : one container for postgres, one for mongodb, one for redis etc.
 Docker compose is used to setup multiple containers, create multiple containers and also destroy them when not needed 
 docker-compose.yml stores the config for those multiple containers 
 
+Docker-compose file stores the services, ports, and the environment variables we want to run.
+docker compose up and docker compose down are the commands to run the services and stop the services too 
+docker compose build is required when we are having something to build interally 
+
+
 
 
 
